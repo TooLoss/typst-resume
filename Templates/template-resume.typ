@@ -1,4 +1,4 @@
-#import "@preview/datify-core:1.0.0": *
+#import "@preview/datify-core:1.0.0": *     // show time date in multiple languages
 
 // colors
 #let color_dark = rgb("#131A28")
