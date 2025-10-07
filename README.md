@@ -9,8 +9,8 @@ A clean, modern resume template written in **Typst**. Two variants included for 
 
 ## Preview
 
-![Resume Preview](./resume-front.pdf)
-![Resume Preview](./resume-front-picture.pdf)
+![Resume Preview](./resume-preview.png)
+![Resume Preview](./resume-preview-picture.png)
 
 ## Variants
 There is a variant with and without pictures depending on the country you live in.
