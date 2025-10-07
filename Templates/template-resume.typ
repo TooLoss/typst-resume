@@ -1,4 +1,4 @@
-#import "@preview/datify-core:1.0.0": *     // show time date in multiple languages
+#import "@preview/datify-core:1.0.0": *
 
 // colors
 #let color_dark = rgb("#131A28")
@@ -153,6 +153,7 @@
   align(left)[
     #smallcaps[#name]
     #box(width: 1fr, line(length: 100%), fill: color_maybe)
+    #box(height: 15pt)
   ]
 }
 
@@ -166,8 +167,16 @@
   let end_year = end.at(1)
 
   context[
-    #let start_month_text = get-month-name(start_month, width: "abbreviated", lang: text.lang)
-    #let end_month_text = get-month-name(end_month, width: "abbreviated", lang: text.lang)
+
+    #let start_month_text = ""
+    #let end_month_text = ""
+    
+    #if start_month != 0 [
+      #let start_month_text = get-month-name(start_month, width: "abbreviated", lang: text.lang) 
+    ]
+    #if end_month != 0 [
+      #let end_month_text = get-month-name(end_month, width: "abbreviated", lang: text.lang)
+    ]
 
     #let total_text = start_month_text + " " + start_year + " - " + end_month_text + " " + end_year
     
@@ -175,7 +184,7 @@
   ]
 }
 
-#let new_education(name, positions, location, start_date, end_date, infos) = {
+#let new_infos(name, positions, location, start_date, end_date, infos) = {
   
   pad(bottom: -7pt)[
     #align_left_right[
@@ -221,7 +230,7 @@
 #let new_skill(category, infos) =  {
   pad(bottom: -7pt)[
     #grid(
-      align: horizon,
+      align: top,
       columns: (1.5fr, 5fr),
       column-gutter: 2em,
       align(right)[#smallcaps[#text(category, weight: "bold")]],
