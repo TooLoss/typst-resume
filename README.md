@@ -55,6 +55,7 @@ Edit the `#show: resume.with(gparams: ...)` block:
     )
   )
 )
+```
 
 
 ## Usage
