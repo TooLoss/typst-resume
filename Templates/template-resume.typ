@@ -168,16 +168,9 @@
 
   context[
 
-    #let start_month_text = ""
-    #let end_month_text = ""
+    #let start_month_text = if start_month != 0 {get-month-name(start_month, width: "abbreviated", lang: text.lang)} else {""}
+    #let end_month_text = if end_month != 0 {get-month-name(end_month, width: "abbreviated", lang: text.lang)} else {""}
     
-    #if start_month != 0 [
-      #let start_month_text = get-month-name(start_month, width: "abbreviated", lang: text.lang) 
-    ]
-    #if end_month != 0 [
-      #let end_month_text = get-month-name(end_month, width: "abbreviated", lang: text.lang)
-    ]
-
     #let total_text = start_month_text + " " + start_year + " - " + end_month_text + " " + end_year
     
     #text(total_text, style: "italic")
@@ -240,7 +233,7 @@
           index += 1
           text(i)
           if index != infos.len() [
-            #text(", ")
+            #text(",")
           ]
         } 
       },

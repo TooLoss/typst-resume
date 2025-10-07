@@ -22,6 +22,8 @@
   )
 )
 
+/* education */
+
 #new_section("Education")
 
 #new_infos("École Nationale Supérieure des Télécommunications",
@@ -45,7 +47,7 @@
 #new_section("Expérience")
 
 #new_infos("Innovatech",
-           ("Chef de Projet IT", "Gestion d'équipes agiles, coordination avec les parties prenantes, livraison de solutions logicielles sur mesure"),
+           ("Chef de Projet IT", "Gestion d'équipes agiles, solutions logicielles sur mesure"),
            "13001 - Marseille", (1, "2023"), (0, "Présent"),
            ("Projets récents : Déploiement d'une plateforme SaaS pour 500+ utilisateurs, certification Scrum Master",))
 
