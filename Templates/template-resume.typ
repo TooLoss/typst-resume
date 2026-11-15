@@ -99,30 +99,17 @@
   }
 
   let contact = {
-    set box(height: 1pt)
     set text(size: textsize_text)
 
-    let separator = box(width: contact_margin)
+    let items = gparams.contact.map(((icon, string)) => {
+      box(icon, height: icon_size, width: icon_size, baseline: 20%)
+      h(5pt)
+      string
+    })
 
-    align(left)[
-      #block(height: 0pt)[
-        #align(horizon)[
-          #let i = 0
-          #for (icon, string) in gparams.contact {
-            i = i + 1
-            {box(icon, height: icon_size, width: icon_size, baseline: icon_size/2)}
-            box(width: 5pt)
-            {box[#text(string)]}
-            if gparams.contact.len() != i [
-              #separator
-              #text(baseline: 2pt)[|]
-              #separator
-            ]
-          }
-        ]
-      ]
-    ]
+    align(left, items.join([#h(contact_margin) | #h(contact_margin)]))
   }
+
   if gparams.show_picture [
     #grid(
       align: horizon,
