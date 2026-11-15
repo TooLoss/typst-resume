@@ -1,4 +1,14 @@
-#import "/Templates/template-resume.typ": *
+#import "/templates/template-resume.typ": *
+#import "@preview/linguify:0.5.0": *
+
+#let lang="en"
+
+// language
+#let lang-data = toml("lang.toml")
+#set-database(lang-data)
+#let l = linguify // alias
+
+#set text(lang: lang)
 
 // who when where how why + final result
 // quantitatif et qualitatif
@@ -7,78 +17,96 @@
   gparams: (
     firstname: "El Haddadi",
     lastname: "Bilèle",
-    lang: "fr",
+    lang: lang,
     position: (
-      "Ingénieur informatique",
-      "Étudiant ENSEEIHT",
+      l("status"),
+      l("ingenieur"),
     ),
-    picture: image("Assets/picture.jpg", width: 100%),
+    extra: (
+      l("seek"),
+      l("begin"),
+      l("location"),
+    ),
+    picture: image("private/cv-image.jpg", width: 100%),
     show_picture: true,
+    // contact: (
+    //   (image("assets/website.svg"), "eportfolio.bilele.tech", "https://eportfolio.bilele.tech/"),
+    //   (image("assets/github.svg"), "github.com/TooLoss", "https://github.com/TooLoss"),
+    //   (image("assets/linkedin.svg"), "linkedin.com/in/bilele-elhaddadi",
+    //   "https://www.linkedin.com/in/bilele-elhaddadi/"),
+    //   (image("assets/mail.svg"), "bilele.elhaddadi@gmail.com",
+    //   "mailto:bilele.elhaddadi@gmail.com"),
+    //   (image("assets/phone.svg"), "+33 6 51 92 76 04", "tel:+33651927604"
+    //   )
     contact: (
-      (image("Assets/mail.svg"), "bilele.elhaddadi@gmail.com"),
-      (image("Assets/github.svg"), "TooLoss"),
-      (image("Assets/linkedin.svg"), "bilele-elhaddadi")
+      // ("Portfolio : ", "eportfolio.bilele.tech", "https://eportfolio.bilele.tech/"),
+      ("GitHub : ", "github.com/TooLoss", "https://github.com/TooLoss"),
+      ("LinkedIn : ", "linkedin.com/in/bilele-elhaddadi", "https://www.linkedin.com/in/bilele-elhaddadi/"),
+      ("Email : ", "bilele.elhaddadi@gmail.com", "mailto:bilele.elhaddadi@gmail.com"),
+      ("Tél. : ", "+33 6 51 92 76 04", "tel:+33651927604"),
     )
   )
 )
 
 /* education */
 
-#new_section("Education")
+#new_section(l("formation"))
 
-#new_infos("École Nationale Supérieure des Télécommunications",
-           ("Master Cybersécurité", "Réseaux, Cryptographie, Sécurité des Systèmes"),
-           "75013 - Paris", (1, "2010"), (2, "2012"),
-           ("Certification : Expert en Sécurité des Réseaux",))
+#new_infos("Toulouse INP-ENSEEIHT",
+           (l("diplome"), l("logiciel")),
+           "31000 - Toulouse", (9, "2025"), (0, l("actuel")),
+           (l("enseeiht-skill-1"), l("enseeiht-skill-2")))
 
-#new_infos("Université Paris-Saclay",
-           ("Licence Informatique", "Développement Logiciel, Intelligence Artificielle"),
-           "91190 - Gif-sur-Yvette", (1, "2005"), (3, "2008"),
-           ("Projet de fin d'études : Système de recommandation",))
+#new_infos(l("prepa"),
+           (l("prepa-sup"), l("prepa-spe")),
+           "78100 - Saint-Germain-en-Laye", (9, "2023"), (7, "2025"),
+           ("",))
 
 
-#new_infos("Lycée Alfred Kastler",
-              ("Baccalauréat Général", "Maths Physique"), 
-              "95600 - Cergy", (1, "2000"), (2, "2001"),
-              ("Réseaux",))
+#new_infos(l("lycee"),
+              (l("bac"), l("bac-spe")), 
+              "95600 - Cergy", (7, "2023"), (7, "2023"),
+              (l("bac-mention"),))
 
 /* exprience */
 
-#new_section("Expérience")
+#new_section(l("experience"))
 
-#new_infos("Innovatech",
-           ("Chef de Projet IT", "Gestion d'équipes agiles, solutions logicielles sur mesure"),
-           "13001 - Marseille", (1, "2023"), (0, "Présent"),
-           ("Projets récents : Déploiement d'une plateforme SaaS pour 500+ utilisateurs, certification Scrum Master",))
+#new_infos(l("net7"),
+           (l("net7-role"), ),
+           "31000 - Toulouse", (5, "2026"), (0, l("actuel")),
+           (l("net7-1"), l("net7-2"), l("net7-3")))
 
-#new_infos("DataInsights SAS",
-           ("Analyste Données", "Collecte et analyse de données clients"),
-           "92000 - Nanterre", (3, "2015"), (5, "2018"),
-           ("Réalisations : Réduction des coûts marketing de 15% grâce à l'analyse prédictive",))
-           
-#new_infos("TechSolutions Inc.",
-           ("Développeur Full-Stack", "Développement d'applications web"),
-           "75009 - Paris", (6, "2018"), (12, "2022"),
-           ("Projets clés : Migration vers une architecture microservices, optimisation des performances (+30% de rapidité)",))
+#new_infos(l("stage-1A"),
+           (l("stage-1A-role"), l("stage-1A-type")),
+           "31000 - Toulouse", (6, "2026"), (7, "2026"),
+           (l("stage-1A-what"), l("stage-1A-result")))
               
 /* projects */
 
-#new_section("Projects")
+#new_section(l("projets"))
 
-#new_project("E-Commerce Platform Redesign",
-              ("Developed a scalable e-commerce backend using Node.js and React for a retail client in Paris, France. Implemented payment gateways, user authentication, and real-time inventory updates. Reduced page load time by 40% and increased conversion rates by 20%.", "Tech Stack: Node.js, React, MongoDB, AWS"))
+#new_project(l("projet1-name"),
+  (
+    l("projet1-what"),
+    l("projet1-how"),
+    l("projet1-why"),
+    l("projet1-result"),
+  ))
 
-#new_project("AI-Powered Chatbot for Customer Support",
-              ("Led a team of 4 to design and deploy an AI chatbot for a telecom company in Lyon, France. Trained the model on historical customer queries, integrated it with their CRM, and reduced response time by 60%. Published findings at a national tech conference.", "Tools: Python, TensorFlow, NLP, Dialogflow"))
-
-
+#new_project(l("projet2-name"),
+  (
+    l("projet2-what"),
+    l("projet2-how"),
+    l("projet2-why"),
+    l("projet2-result"),
+  ))
 
 /* skills */
 
-#new_section("Skills")
+#new_section(l("skills"))
 
-#new_skill("Languages :", ("C++", "Java", "Python"))
-#new_skill("Soft Skills :", ("Anglais", "Français", "Travail d'équipe"))
-
-#new_skill("Certifications :", ("Certification AWS Cloud Practitioner", "Certification Scrum Master (PSM I)", "Google IT Support Professional"))
-#new_skill("Hobbies :", ("Photographie argentique", "Randonnée en montagne", "Développement de jeux vidéo indie", "Cuisine végétarienne"))
+#new_skill(l("skill-langages-title"), l("skill-langages-list"))
+#new_skill(l("skill-devops-title"), l("skill-devops-list"))
+#new_skill(l("skill-methodes-title"), l("skill-methodes-list"))
+#new_skill(l("skill-interets-title"), l("skill-interets-list"))
