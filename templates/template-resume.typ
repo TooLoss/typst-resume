@@ -15,7 +15,7 @@
 
 #let contact_margin = 5pt
 #let section_gap_above = 8pt
-#let section_gap_below = 10pt
+#let section_gap_below = 16pt
 #let paragraph_spacing = 0.75em
 
 #let paragraph_spacing = 0.75em

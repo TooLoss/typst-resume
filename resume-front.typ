@@ -1,7 +1,7 @@
 #import "/templates/template-resume.typ": *
 #import "@preview/linguify:0.5.0": *
 
-#let lang="en"
+#let lang="fr"
 
 // language
 #let lang-data = toml("lang.toml")
