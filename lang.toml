@@ -6,8 +6,8 @@ default-lang = "en"
 
 [lang.fr]
 # general
-ingenieur = "Ingénieur informatique"
-seek = "Recherche stage de 2e année en Développement Logiciel / DevOps"
+ingenieur = "Ingénieur logiciel"
+seek = "Recherche stage de 2e année en Ingénierie Logicielle"
 begin = "À partir de Juin 2027 (8 à 12 semaines)."
 location = "Toulouse / Île-de-France"
 status = "Étudiant ENSEEIHT"
@@ -34,14 +34,14 @@ bac-mention = "Mention très bien (TB)"
 
 # experience
 stage-1A = "Stagiaire à net7"
-stage-1A-role = "Développeur FullStack & Ingénieur DevOps / SysAdmin"
+stage-1A-role = "Développeur Logiciel Full-Stack"
 stage-1A-type = "Application Web SaaS"
-stage-1A-what = "Projet : Plateforme web SaaS d'intégration INP-Toulouse (+4 000 utilisateurs) - Développement en équipe, déploiement DevOps (Kubernetes, Docker), monitoring serveurs et SSO (Authentik)."
+stage-1A-what = "Projet : Plateforme web SaaS d'intégration INP-Toulouse (+4 000 utilisateurs) - Conception et développement en équipe, authentification SSO (Authentik), conteneurisation et déploiement continu (Docker, Kubernetes)."
 stage-1A-result = "Résultat : Déployée avec succès pour +4 000 étudiants (Aen7), avec livraisons continues post-lancement pour l'ajout de fonctionnalités."
 net7 = "Bureau net7"
 net7-role = "Trésorier"
-net7-1 = "Opérations Techniques & Infra : Maintien en production de 10+ services étudiants SaaS (Cloud, billetterie) et administration de l'infrastructure."
-net7-2 = "Leadership & Communication : Animation de formations techniques (Git, Svelte, SysAdmin, Algorithmie) et conférencier (Capitole du Libre, THCon, SWERC)."
+net7-1 = "Développement & Maintenance : Évolution et maintien en production de 10+ applications et services étudiants SaaS (Cloud, billetterie)."
+net7-2 = "Leadership & Communication : Animation de formations techniques (Git, Svelte, Algorithmie, Linux) et conférencier (Capitole du Libre, THCon, SWERC)."
 net7-3 = "Trésorerie : Gestion financière et budgétaire de l'association."
 
 # projects
@@ -60,12 +60,12 @@ projet2-result = "Exécution native améliorée de 96% (de 1m30 pour Python nati
 # skills
 skills-langue = "Compétences"
 skill-langages-title = "Langages :"
-skill-devops-title = "DevOps :"
+skill-devops-title = "Outils & Cloud :"
 skill-methodes-title = "Langues/Méthodes :"
 skill-interets-title = "Centres d'intérêt :"
 skill-langages-list = "C++, C, Java, Python, TypeScript, SQL, Bash, Ada"
-skill-devops-list = "Linux, Docker, Kubernetes, Git, CI/CD, SSO (Authentik), Self-Hosting"
-skill-methodes-list = "Français (Natif), Anglais (B2), Agile (Scrum), Travail collaboratif"
+skill-devops-list = "Git, CI/CD, Linux, Docker, Kubernetes, Authentification (SSO)"
+skill-methodes-list = "Français (Natif), Anglais (B2), Agile (Scrum), Architecture logicielle"
 skill-interets-list = "Escalade, Modélisation 3D (Blender), Design graphique & UI"
 
 
@@ -73,8 +73,8 @@ skill-interets-list = "Escalade, Modélisation 3D (Blender), Design graphique & 
 
 [lang.en]
 # general
-ingenieur = "Computer Science Engineer"
-seek = "Seeking a 2nd-year Software Engineering / DevOps Internship"
+ingenieur = "Software Engineer"
+seek = "Seeking a 2nd-year Software Engineering Internship"
 begin = "Starting June 2027 (8 to 12 weeks)."
 location = "Toulouse / Paris Region (Île-de-France)"
 status = "ENSEEIHT Student"
@@ -101,14 +101,14 @@ bac-mention = "Highest Honors (Mention Très Bien)"
 
 # experience
 stage-1A = "Intern at net7"
-stage-1A-role = "Full-Stack Developer & DevOps / SysAdmin"
+stage-1A-role = "Full-Stack Software Developer"
 stage-1A-type = "SaaS Web Application"
-stage-1A-what = "Project: INP-Toulouse student onboarding SaaS platform (4,000+ users) - Team development, DevOps deployment (Kubernetes, Docker), server monitoring, and SSO (Authentik)."
+stage-1A-what = "Project: INP-Toulouse student onboarding SaaS platform (4,000+ users) - Team software development, SSO authentication (Authentik), containerization, and continuous deployment (Docker, Kubernetes)."
 stage-1A-result = "Result: Successfully adopted by 4,000+ students (Student Union Aen7), delivering continuous post-launch updates and new features."
 net7 = "net7 Executive Board"
 net7-role = "Treasurer"
-net7-1 = "Technical Operations & Infra: Maintained 10+ student SaaS production services (Cloud, ticketing) and administered association servers."
-net7-2 = "Leadership & Communication: Led technical workshops (Git, Svelte, SysAdmin, Algorithms) and coordinated volunteer teams during events and competitions (Capitole du Libre, THCon, SWERC)."
+net7-1 = "Software Maintenance & Operations: Developed and maintained 10+ production student SaaS applications (Cloud, ticketing)."
+net7-2 = "Leadership & Communication: Led technical workshops (Git, Svelte, Algorithms, Linux) and coordinated volunteer teams during events and competitions (Capitole du Libre, THCon, SWERC)."
 net7-3 = "Treasury: Managed the association's finances and budget."
 
 # projects
@@ -127,10 +127,10 @@ projet2-result = "Improved native execution speed by 96% (from 1m30s in pure Pyt
 # skills
 skills-langue = "Skills"
 skill-langages-title = "Languages:"
-skill-devops-title = "DevOps:"
+skill-devops-title = "Tools & Cloud:"
 skill-methodes-title = "Languages & Methods:"
 skill-interets-title = "Interests:"
 skill-langages-list = "C++, C, Java, Python, TypeScript, SQL, Bash, Ada"
-skill-devops-list = "Linux, Docker, Kubernetes, Git, CI/CD, SSO (Authentik), Self-Hosting"
-skill-methodes-list = "French (Native), English (B2), Agile (Scrum), Collaborative Work"
+skill-devops-list = "Git, CI/CD, Linux, Docker, Kubernetes, Authentication (SSO)"
+skill-methodes-list = "French (Native), English (B2), Agile (Scrum), Software Architecture"
 skill-interets-list = "Rock Climbing, 3D Modeling (Blender), Graphic & UI Design"
